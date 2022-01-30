@@ -1,0 +1,33 @@
+body{
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: #423e3d;
+}
+.toppart{
+    margin-top: 5%;
+    margin-bottom: 15%;
+    color: rgb(189, 189, 39);
+    /* background-color: lightcoral; */
+}
+div{
+    /* background-color: aqua; */
+    color: #ada9a9;
+    font-size: x-large;
+    letter-spacing: .08rem;
+    word-spacing: .2rem;
+    line-height: 2rem;
+    font-family:"Arial",'Times New Roman', serif;
+}
+.proname{
+    color: rgb(204, 186, 186);
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: .045rem;
+    font-size: 2.5rem;
+}
+.timecnt{
+    color: #ECEC35;
+}
+section img{
+    width: 3%;
+    height: 3%;
+}
