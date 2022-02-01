@@ -6,16 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>randomtype</title>
     <!-- css -->
-        <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <!--     -->
+
+    <!-- Java Script -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script  src="./js/word.js" type="text/javascript"></script>
+    <!-- *********** -->
 </head>
 <body>
     <header class="toppart">
-        <h1 class="proname">randomtype</h1>
+        <div class="lefttop">
+            <h1 class="proname">randomtype</h1>
+            <div class="leftbuttons">
+                <a href="index.html">key</a>
+                <a href="index.html">set</a>
+                <a href="index.html">acnt</a>
+            </div>
+        </div>
+        <div class="righttop">
+            <label for="wordcount">Choose no.of words</label>
+            <select id="wordcount" name="wordcount">
+            <option value="0" selected>none</option>
+            <option value="10" >10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="60">60</option>
+            </select>
+        </div>
     </header>
     <div>
-        <h2 class="timecnt">15</h2>
-        <p>Lorem ipsum dolor sit  adipisicing elit. magnam minus recusandae voluptate nihil aut autem officiis nam soluta veritatis perferendis veniam! Excepturi neque</p>
+        <h2 class="timecnt">10</h2>
+        <div class="paradisp">
+            select count first
+        </div>
+        <button class="forrestart">restart</button>
     </div>
     <footer>
         <div class="contributers">
@@ -25,5 +50,9 @@
             </section>
         </div>
     </footer>
+
+    <!-- java script -->
+    <script  src="./js/app.js" type="text/javascript"></script>
+    <!--*************-->
 </body>
 </html>
