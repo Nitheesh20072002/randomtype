@@ -28,8 +28,72 @@ div{
 .timecnt{
     color: #ECEC35;
 }
-.forrestart{
+.forrestart1{
     margin-left: 45%;
+}
+.forrestart2{
+    margin-left: 45%;
+}
+
+.wordsinpara{
+    padding-right: 2%;
+    display: inline-block;
+}
+.paradisp{
+    margin-bottom: 1.5em;
+    width: 100%;
+    max-height: 23vh ;
+    overflow-y:scroll;
+    /* display: -webkit-box; */
+    /* number of lines to show */
+    /* -webkit-line-clamp: 3;  */
+    /* line-clamp: 3; */
+   /* -webkit-box-orient: vertical;  */
+   /* -ms-overflow-style: none;  */
+    /* display: flex; 
+    flex-wrap: wrap; */
+    /* overflow-x: hidden;
+    overflow-y: auto; */
+    /* flex-grow: 1; */
+    /* width: 100%; */
+    /* height: 115px;/ */
+    /* scroll-snap-stop: always; */
+    
+   /* Firefox  */
+     scrollbar-width: none; 
+
+
+
+
+    /* margin:4px, 4px;
+    padding:4px;
+    background-color: green;
+    width: 500px;
+    height: 110px;
+    /* overflow-x: hidden; */
+    /* overflow-y: auto; */
+    /* text-align:justify; */
+}
+.paradisp::-webkit-scrollbar {
+    display: none;
+}
+.typed{
+    width: 100%;
+    height: 50px;
+    font-size: 30px;
+}
+.correctspelled{
+    color: green;
+}
+.wrongspelled{
+    color: red;
+}
+.midpart1{
+    display: block;
+    /* overflow: scroll; */
+}
+.midpart2{
+    display: none;
 }
 /* footer image */
 
@@ -38,4 +102,4 @@ section img{
     height: 3%;
 }
 
-/*  */
+/***************/
