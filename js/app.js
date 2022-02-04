@@ -5,8 +5,8 @@ import {clearing,addingchild} from "./test.js";
 // 
 
 // HTML selectors
-
-const wordcount=document.querySelector('#wordcount');
+const wordcounts=[document.querySelector("#wordcount1"),document.querySelector("#wordcount2"),
+document.querySelector("#wordcount3"),document.querySelector("#wordcount4")];
 const restart1=document.querySelector('.forrestart1');
 const restart2=document.querySelector('.forrestart2');
 const inp=document.querySelector('.typed');
@@ -19,7 +19,9 @@ const correctwords=document.querySelector('.correct');
 let wordtyped=0,curposinpara=0;
 let count=0;let last=0;
 let timetaken=0;let timervar=0;
-
+const wordcountselected=[10,25,50,100];
+let wordcountavailable=4;
+let numofwordsselected=0;
 // 
 
 // if(curposinpara==0){
@@ -45,12 +47,6 @@ function wordconv(res){
     if(res[pos].length<9){
       str+=`${res[pos]} `;  
       addingchild(paradisp,'div',`${res[pos]}`,'wordsinpara',"wordsinpara"+`${req}`);
-      // const node=document.createElement("div");
-      // const textinnode=document.createTextNode(`${res[pos]}`);
-      // node.appendChild(textinnode);
-      // node.setAttribute('class','wordsinpara');
-      // node.setAttribute('id',"wordsinpara"+`${req}`);
-      // paradisp.appendChild(node);
       req++;
     }
     pos++;
@@ -60,19 +56,47 @@ function wordconv(res){
 // 
 
 // eventlistner for numer of words choosen
-
-wordcount.addEventListener('change', (eve)=>{
-  // wordtyped=0;curposinpara=0;
-  // last=0;
-  
-  // correctwords.textContent="correct words: 0";
-  const timeworddisp=document.querySelector('.timecnt');
-  var curcnt=eve.target.value;
-  count=curcnt;
-  timeworddisp.textContent=`${curcnt}`;
-  restart();
-  // getword(curcnt);
+wordcounts[0].addEventListener('click',(eve)=>{
+  numofwordsselected=0;
+  wordselection();
 })
+wordcounts[1].addEventListener('click',(eve)=>{
+  numofwordsselected=1;
+  wordselection();
+})
+wordcounts[2].addEventListener('click',(eve)=>{
+  numofwordsselected=2;
+  wordselection();
+})
+wordcounts[3].addEventListener('click',(eve)=>{
+  numofwordsselected=3;
+  wordselection();
+})
+
+function wordselection(){
+  for(let i=0;i<wordcountavailable;i++){
+    if(wordcounts[i].classList.contains('active')){
+      wordcounts[i].classList.remove('active');
+    }
+    if(i==numofwordsselected){
+      const timeworddisp=document.querySelector('.timecnt');
+      var curcnt=wordcountselected[numofwordsselected];
+      count=curcnt;
+      timeworddisp.textContent=`${curcnt}`;
+      wordcounts[i].classList.add('active');
+      restart();
+    }
+  }
+}
+
+// wordcount.addEventListener('change', (eve)=>{
+//   // wordtyped=0;curposinpara=0;
+//   // last=0;
+  
+//   // correctwords.textContent="correct words: 0";
+  
+//   // getword(curcnt);
+// })
 
 // 
 
@@ -87,7 +111,7 @@ function restart(){
   const paradisp=document.querySelector('.paradisp');
   clearing(paradisp);
   correctwords.textContent="correct words: 0";
-  const cnt=wordcount.value;
+  const cnt=wordcountselected[numofwordsselected];
   getword(cnt);
   inp.value="";
 }
