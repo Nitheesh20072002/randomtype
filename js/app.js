@@ -124,9 +124,6 @@ restart1.addEventListener('click',(eve)=>{
   restart();
 })
 
-// 
-
-// event listener on restart button in midpart2
 
 restart2.addEventListener('click',(eve)=>{
   restart();
@@ -136,6 +133,7 @@ restart2.addEventListener('click',(eve)=>{
   midpar1.style.display="block";
   document.querySelector('.righttop').style.display="block";
 })
+
 
 // 
 

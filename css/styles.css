@@ -64,6 +64,9 @@ div{
     height: 50px;
     font-size: 30px;
     margin-bottom: 5%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
 }
 .correctspelled{
     color: green;
@@ -78,11 +81,18 @@ div{
 .leftbuttons a{
     margin-right: 3rem;
 }
+.forhover:hover{
+    color: red;
+}
+.contributers{
+    color: red;
+}
+a{
+    color: #ada9a9; 
+    text-decoration: none;
+}
 /* footer image */
 
-section img{
-    width: 3%;
-    height: 3%;
-}
+
 
 /***************/
